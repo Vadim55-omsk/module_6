@@ -14,10 +14,10 @@ class Animal:
             print(f"{self.name} не стал есть {food.name}")
             self.alive = False
 
-class Plant:
-    edible = False
+class Plant:    
     def __init__(self, name):        
         self.name = name
+        self.edible = False
 
 class Mammal(Animal):
     pass
@@ -29,7 +29,9 @@ class Flower (Plant):
     pass
 
 class Fruit (Plant):
-    edible = True
+    def __init__(self, name):
+      self.name = name
+      self.edible = True
 
 
 a1 = Predator('Волк с Уолл-Стрит')
