@@ -1,12 +1,10 @@
-
 class Animal:
-    alive = True #атрибуты класса или общие?
+    alive = True #атрибуты класса
     fed = False
     def __init__(self, name):
         self.name = name
-        
 
-    def eat(self, food):  # Результат поедания чего ли-бо
+    def eat(self, food):  
         if food.edible:
             print(f"{self.name} съел {food.name}")
             self.fed = True
@@ -14,10 +12,10 @@ class Animal:
             print(f"{self.name} не стал есть {food.name}")
             self.alive = False
 
-class Plant:    
-    def __init__(self, name):        
-        self.name = name
+class Plant:
+    def __init__(self, name):
         self.edible = False
+        self.name = name
 
 class Mammal(Animal):
     pass
@@ -34,6 +32,7 @@ class Fruit (Plant):
       self.edible = True
 
 
+
 a1 = Predator('Волк с Уолл-Стрит')
 a2 = Mammal('Хатико')
 p1 = Flower('Цветик семицветик')
@@ -48,3 +47,4 @@ a1.eat(p1)
 a2.eat(p2)
 print(a1.alive)
 print(a2.fed)
+
